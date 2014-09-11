@@ -1,0 +1,21 @@
+{
+  "name": "node-util",
+  "main": "util.js",
+  "version": "0.11.13",
+  "homepage": "https://github.com/jxck/node-util",
+  "description": "browser porting of util.js in node.js",
+  "keywords": [
+    "util""
+  ],
+  "authors": [
+    "Jxck"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
