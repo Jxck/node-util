@@ -19,6 +19,10 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+(function(global) {
+
+exports = {};
+
 var formatRegExp = /%[sdj%]/g;
 exports.format = function(f) {
   if (!isString(f)) {
@@ -745,3 +749,6 @@ exports._errnoException = function(err, syscall, original) {
   e.syscall = syscall;
   return e;
 };
+
+global.util = exports;
+})(this);

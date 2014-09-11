@@ -21,6 +21,7 @@
 
 
 
+(function(require) {
 
 var common = require('../common');
 var assert = require('assert');
@@ -76,3 +77,9 @@ function CustomError(msg) {
 }
 util.inherits(CustomError, Error);
 assert.equal(util.format(new CustomError('bar')), '[CustomError: bar]');
+
+})(function require(name) {
+  if (this[name]) {
+    return this[name];
+  }
+});

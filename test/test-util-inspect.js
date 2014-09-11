@@ -20,19 +20,19 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-
+(function(require) {
 
 var common = require('../common');
 var assert = require('assert');
 var util = require('util');
 
 // test the internal isDate implementation
-var Date2 = require('vm').runInNewContext('Date');
-var d = new Date2();
-var orig = util.inspect(d);
-Date2.prototype.foo = 'bar';
-var after = util.inspect(d);
-assert.equal(orig, after);
+// var Date2 = require('vm').runInNewContext('Date');
+// var d = new Date2();
+// var orig = util.inspect(d);
+// Date2.prototype.foo = 'bar';
+// var after = util.inspect(d);
+// assert.equal(orig, after);
 
 // test positive/negative zero
 assert.equal(util.inspect(0), '0');
@@ -235,3 +235,9 @@ assert.equal(util.inspect(bool), '{ [Boolean: true] foo: \'bar\' }');
 var num = new Number(13.37);
 num.foo = 'bar';
 assert.equal(util.inspect(num), '{ [Number: 13.37] foo: \'bar\' }');
+
+})(function require(name) {
+  if (this[name]) {
+    return this[name];
+  }
+});
