@@ -5,7 +5,7 @@
   "homepage": "https://github.com/jxck/node-util",
   "description": "browser porting of util.js in node.js",
   "keywords": [
-    "util""
+    "util"
   ],
   "authors": [
     "Jxck"
